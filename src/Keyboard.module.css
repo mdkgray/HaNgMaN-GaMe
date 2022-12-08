@@ -1,0 +1,26 @@
+.button {
+    width: 100%;
+    border: 3px solid black;
+    background: none;
+    aspect-ratio: 1 / 1;
+    font-size: 2.5rem;
+    text-transform: uppercase;
+    padding: .5rem;
+    font-weight: bold;
+    cursor: pointer;
+    color: black;
+}
+
+.button.active {
+    background-color: hsl(200, 100%, 50%);
+    color: white;
+}
+
+.button.inactive {
+    opacity: .3;
+}
+
+.button:hover:not(:disabled),
+.button:focus:not(:disabled) {
+    background-color: hsl(200, 100%, 75%);
+}
