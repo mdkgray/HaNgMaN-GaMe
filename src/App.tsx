@@ -19,17 +19,17 @@ function App() {
 
   // Callback function to add guessed letters to array
   const addGuessedLetter = useCallback((letter: string) => {
-    if (guessedLetters.includes(letter)) return;
+    if (guessedLetters.includes(letter) || isWinner || isLoser) return;
 
     setGuessedLetters(currentLetters => [...currentLetters, letter])
-  }, [guessedLetters]);
+  }, [guessedLetters, isLoser, isWinner]);
   
   // useEffect function to add event listener to keyboard press 
   useEffect(() => {
     const handler = (e: KeyboardEvent) => {
       const key = e.key;
 
-      if (!key.match(/^[a-z]$/)) return;
+      if (!key.match(/^[A-Za-z]+$/)) return;
 
       e.preventDefault();
       addGuessedLetter(key);
@@ -59,7 +59,10 @@ function App() {
           {isLoser && "Nice try...Refresh the page to try again."}
       </div>
       <HangmanDrawing numberOfGuesses={incorrectLetters.length}/>
-      <HangmanWord guessedLetters={guessedLetters} wordToGuess={wordToGuess} />
+      <HangmanWord 
+        reveal={isLoser}
+        guessedLetters={guessedLetters} 
+        wordToGuess={wordToGuess} />
       <div style={{ alignSelf: 'stretch'}}>
         <Keyboard
           disabled={isWinner || isLoser}
