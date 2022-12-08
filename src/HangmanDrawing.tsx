@@ -88,6 +88,7 @@ export function HangmanDrawing() {
             {LEFT_ARM}
             {RIGHT_LEG}
             {LEFT_LEG}
+            
             <div style={{ 
                 height: '50px', 
                 width: '10px', 
