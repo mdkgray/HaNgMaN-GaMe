@@ -51,7 +51,8 @@ function App() {
       if (key !== "Enter") return;
 
       e.preventDefault();
-      setWordToGuess(getWord())
+      setGuessedLetters([]);
+      setWordToGuess(getWord());
     }
 
     document.addEventListener("keypress", handler);
