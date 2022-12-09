@@ -72,6 +72,14 @@ function App() {
       marginTop: '100px',
       alignItems: 'center',
     }}>
+      <div style={{
+        color: 'white', 
+        fontSize: '4rem',
+        fontFamily: 'Monospace', 
+        fontWeight: 'bold'
+      }}>
+        HANGMAN
+      </div>
       <div style={{ 
         fontSize: '2rem',
         fontFamily: 'Monospace', 
