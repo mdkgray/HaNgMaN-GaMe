@@ -39,7 +39,7 @@ The application is built with the following command:
 
 ## Contributing
 
-Fork the repo and/or get in contact with the authors to suggest changes or contributions. 
+Fork the repo and/or get in contact with the author to suggest changes or contributions. 
 
 ## Questions
 
