@@ -68,12 +68,15 @@ function App() {
       display: 'flex',
       flexDirection: 'column',
       gap: '2rem',
-      margin: '0, auto',
-      alignItems: 'center'
+      margin: 'auto',
+      marginTop: '100px',
+      alignItems: 'center',
     }}>
       <div style={{ 
-        fontSize: '2rem', 
-        textAlign: 'center'
+        fontSize: '2rem',
+        fontFamily: 'Monospace', 
+        textAlign: 'center',
+        color: 'white'
         }}>
           {isWinner && "You have won! Press enter to try again."}
           {isLoser && "Nice try...Press enter to try again."}

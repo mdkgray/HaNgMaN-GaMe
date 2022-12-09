@@ -1,14 +1,15 @@
 .button {
     width: 100%;
-    border: 3px solid black;
+    border: 3px solid white;
     background: none;
     aspect-ratio: 1 / 1;
     font-size: 2.5rem;
+    font-family: monospace;
     text-transform: uppercase;
     padding: .5rem;
     font-weight: bold;
     cursor: pointer;
-    color: black;
+    color: white;
 }
 
 .button.active {
